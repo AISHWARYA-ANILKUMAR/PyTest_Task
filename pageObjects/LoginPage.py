@@ -1,6 +1,4 @@
-import pytest
-from selenium import webdriver
-from pageObjects.LoginPage import LoginPage
+from selenium.webdriver.common.by import By
 
 
 class LoginPage:
