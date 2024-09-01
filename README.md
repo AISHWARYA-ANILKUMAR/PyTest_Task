@@ -1,4 +1,4 @@
-# PyTest_Task - Selenium Automation with Python (Pytest Framework)
+#  Selenium Automation with Python (Pytest Framework)
 
 This project contains automation scripts using Selenium with Python, organized with the Page Object Model (POM) and tested using the Pytest framework.
 
@@ -11,12 +11,14 @@ This project contains automation scripts using Selenium with Python, organized w
       - resources/: Contains resources needed for tests 
       - README.md: Instructions for setting up and running the project.
 
-## Prerequisites`270
+## Prerequisites
+
       - Python 3.10+
       - Chrome WebDriver 
       - Selenium, Pytest
 
 ## Installations
+
       - selenium
       - pytest
       - pytest-html
