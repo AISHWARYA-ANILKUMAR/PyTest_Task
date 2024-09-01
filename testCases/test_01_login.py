@@ -4,7 +4,8 @@ import pytest
 from selenium import webdriver
 from pageObjects.LoginPage import LoginPage
 
-class Test001Login:
+
+class TestLogin:
     """
     The Test001Login class is to perform login-related testcases
     """
@@ -18,6 +19,7 @@ class Test001Login:
         """
 
         self.driver = setup
+        self.driver.maximize_window()
         self.driver.get(self.baseURL)
         actual_title = self.driver.title
         self.driver.close()
@@ -31,6 +33,7 @@ class Test001Login:
         Test to perform login functionality.
         """
         self.driver = setup
+        self.driver.maximize_window()
         self.driver.get(self.baseURL)
 
         self.lpObj = LoginPage(self.driver)
