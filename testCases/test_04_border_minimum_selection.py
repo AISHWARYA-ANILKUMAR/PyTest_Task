@@ -4,9 +4,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from pageObjects.ProductPage import ProductPage
 
-class TestFieldValidationsProductPage:
+
+class TestMinimumBorderSelection:
     """
-    The TestProductPage class is to perform product-related test cases.
+     Perform tests to validate the minimum border selection requirements on the product page.
     """
     baseURL = "https://woocommerce-850415-2933260.cloudwaysapps.com/product/rf-id-card"
     profile_description = "Buy Product"
@@ -15,7 +16,7 @@ class TestFieldValidationsProductPage:
 
     def test_min_border_requirement(self, setup):
         """
-        Test to perform Add to Cart Functionality
+        Test to verify that an error message is shown when not required number of borders are selected.
         """
         self.driver = setup
         self.driver.maximize_window()
@@ -25,9 +26,7 @@ class TestFieldValidationsProductPage:
         self.pbObj.choose_red_color_variation()
         self.pbObj.choose_landscape_orientation()
         self.pbObj.enter_profile_description(self.profile_description)
-
         self.pbObj.check_phone_number_checkbox()
-
         self.pbObj.enter_phone_number(self.phone)
         self.pbObj.choose_premium_dropdown()
         self.pbObj.upload_logo_img(self.path)

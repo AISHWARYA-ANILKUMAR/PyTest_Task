@@ -7,12 +7,12 @@ from pageObjects.ProductPage import ProductPage
 
 class TestProductPage:
     """
-    The TestProductPage class is to perform product-related test cases.
+    Perform tests related to the product page functionalities.
     """
     baseURL = "https://woocommerce-850415-2933260.cloudwaysapps.com/product/rf-id-card"
     profile_description = "Buy Product"
     phone = "9876543210"
-    path ="C:/Users/Aishwarya/Desktop/PyTest_Task/resources/logo.png"
+    img_path = "C:/Users/Aishwarya/Desktop/PyTest_Task/resources/logo.png"
 
     def test_product_page_title(self, setup):
         """
@@ -27,7 +27,7 @@ class TestProductPage:
 
     def test_add_to_cart(self, setup):
         """
-        Test to perform Add to Cart Functionality
+        Test to perform the  'Add to Cart' Functionality
         """
         self.driver = setup
         self.driver.maximize_window()
@@ -40,7 +40,7 @@ class TestProductPage:
         self.ppObj.check_phone_number_checkbox()
         self.ppObj.enter_phone_number(self.phone)
         self.ppObj.choose_premium_dropdown()
-        self.ppObj.upload_logo_img(self.path)
+        self.ppObj.upload_logo_img(self.img_path)
         self.ppObj.choose_border()
         self.ppObj.click_add_to_cart_button()
 
