@@ -7,6 +7,7 @@ This project contains automation scripts using Selenium with Python, organized w
 - pageObjects:Contains Page Object Models (POMs) for different pages.
 - testCases: Contains test cases organized by functionality.
 - env: Virtual Environment
+- conftest : Contains configuration for Pytest.
 - resources : Contains resources needed for tests.
 - README.md: Contais instructions for setting up and running, the project.
 
