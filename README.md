@@ -4,21 +4,59 @@ This project contains automation scripts using Selenium with Python, organized w
 
 ## Project Structure
 
-- pageObjects:Contains Page Object Models (POMs) for different pages.
-- testCases: Contains test cases organized by functionality.
-- env: Virtual Environment
-- conftest : Contains configuration for Pytest.
-- resources : Contains resources needed for tests.
-- README.md: Contais instructions for setting up and running, the project.
+      - pageObjects/: Contains Page Object Models (POMs) for different pages.
+      - testCases/: Contains test cases organized by functionality.
+      - env/: Virtual environment.
+      - conftest.py: Contains configurations  for Pytest.
+      - resources/: Contains resources needed for tests 
+      - README.md: Instructions for setting up and running the project.
+
+## Prerequisites`270
+      - Python 3.10+
+      - Chrome WebDriver 
+      - Selenium, Pytest
 
 ## Installations
-- selenium
-- pytest
+      - selenium
+      - pytest
+      - pytest-html
 
-## Prerequisites
-- Python 3.10+
-- Pip
-- Chrome WebDriver 
-- Selenium, Pytest
+## Project Set Up
+
+ 1. Clone the repository :
+    
+          git clone <repository-url>
+
+ 2. Activate the virtual environment:
+     
+         env\Scripts\activate
+
+ 3. Install pytest, selenium, and optionally pytest-html for reports :
+
+        pip install pytest selenium pytest-html
+
+ 4. To run all the test cases:
+    
+        pytest testCases
+        or
+        pytest
+
+ 5. To run individual test cases:
+
+        pytest -v -s testCases/<test_case_file_name>.py
+
+        e.g., pytest -v -s testCases/test_01_login.py
+
+ 6. To generate an HTML report:
+ 
+        pytest --html=<report_name>.html
+   
+        e.g.,  pytest -rA --html="TestReport.html"
+
+
+
+
+
+
 
 

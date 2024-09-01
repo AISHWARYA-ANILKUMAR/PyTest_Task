@@ -9,7 +9,7 @@ class LoginPage:
 
     def __init__(self, driver):
         """
-       initializes the driver for the class
+       Initializes the driver for the class
         """
         self.driver = driver
 

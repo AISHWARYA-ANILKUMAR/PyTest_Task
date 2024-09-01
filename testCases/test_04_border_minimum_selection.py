@@ -32,6 +32,7 @@ class TestMinimumBorderSelection:
         self.pbObj.upload_logo_img(self.path)
         self.pbObj.select_single_border()
         self.pbObj.click_add_to_cart_button()
+
         expected_error_message = "Border: Make at least 2 selections."
         actual_error_message = self.pbObj.get_border_error_message()
         assert actual_error_message == expected_error_message, f"Expected: {expected_error_message}, but got: {actual_error_message}"
